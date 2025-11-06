@@ -1,0 +1,200 @@
+while True: #Looping the calculator's operation
+    print("Выберите ваш язык\n" 
+    "choose your language\n" 
+    "1- English\n" 
+    "2 - Русский") # We give the user a choice of language
+    
+    choise_lan = int(input())
+    
+
+
+    if choise_lan == 1:
+
+        print ("Welcome to our calculator") # Welcome the user
+        print("Select the operation you need")
+        print("1 - Addition")
+        print("2 - Subtraction")
+        print("3 - Division")
+        print("4 - Multiplication")
+        print("5 - Exponentiation")
+        print("6 - Integer division")
+        print("7 - I don't know what I'm doing here at all")
+        mode = int(input()) # We give the user a choice of operating mode
+
+
+        if mode == 1: #The user has selected mode 1 and we are starting its operation
+            print("You have selected the addition operation, and the calculator needs you to enter numbers separated by a space.")
+            num_for_sum = input().split() # The user enters numbers separated by a space
+
+            num_for_sum = [float(num) for num in num_for_sum ] # Convert string to numbers
+
+            # Performing the addition
+            result_sum = 0
+            for num in num_for_sum:
+                result_sum += num
+            
+            print("Sum:", result_sum ) # Output the result
+
+
+        if mode == 2: #The user has selected mode 2 and we are starting its operation
+            print("You have selected the Subtraction operation, and the calculator needs you to enter numbers separated by a space.")
+            num_for_sub = input().split() # The user enters numbers separated by a space
+
+            num_for_sub = [float(num_sub) for num_sub in num_for_sub ] # Converting a string to numbers
+
+            # Performing the subtraction
+            result_sub = num_for_sub[0]
+            for num_sub in num_for_sub[1:]:
+                result_sub -= num_sub
+            
+            print("Operation Subtraction:", result_sub )# Output the result
+
+
+        if mode == 3: #The user has selected mode 3 and we are starting its operation
+            print("You have selected the division operation, and the calculator needs you to enter numbers separated by a space.")
+            num_for_del = input().split() # The user enters numbers separated by a space
+
+            num_for_del = [float(num_del) for num_del in num_for_del ] # Converting a string to numbers
+
+            # Performing the division
+            result_del = num_for_del[0]
+            for num_del in num_for_del[1:]:
+                result_del /= num_del
+            
+            print("Division result:", result_del )# Output the result
+
+
+        if mode == 4: #The user has selected mode 4 and we are starting its operation
+            print("You have selected the multiplication operation, and the calculator needs you to enter numbers separated by a space.")
+            num_for_mul = input().split() # The user enters numbers separated by a space
+
+            num_for_mul = [float(num_mul) for num_mul in num_for_mul ] # Converting a string to numbers
+
+            # Performing the multiplication
+            result_mul = 1
+            for num_mul in num_for_mul:
+                result_mul *= num_mul
+            
+            print("Multiplication result:", result_mul ) # Output the result
+
+
+        if mode == 5: #The user has selected mode 5 and we are starting its operation
+            print("You have chosen the exponentiation operation, the calculator only needs TWO numbers from you.")
+            num_deg = int(input("Enter the number to exponentiate:"))
+            degree = int(input("Enter the degree:"))
+        
+            result_deg = num_deg ** degree  # Performing exponentiation
+
+            print("Result of construction" , result_deg) # Output the result
+
+
+        if mode == 6: #The user has selected mode 6 and we are starting its operation
+            print("You have chosen an integer operation, the calculator needs only TWO numbers from you.")
+            num_div = int(input("Enter a number for integer division: "))
+            divider = int(input("Enter the divisor: "))
+        
+            
+            result_division = num_div // divider # Performing integer division
+            print("Integer division result" , result_division) # Output the result
+
+
+        if mode == 7: #The user has selected mode 7 and we are starting its operation
+
+            print ("Come and decide something") 
+            exit() # Program termination
+
+        
+    if choise_lan == 2:
+
+        print("Приветствуем вас в нашем калькуляторе") # Приветствуем пользователя
+        print("Выберите нужную вам операцию")
+        print("1 - Сложение")
+        print("2 - Вычитание")
+        print("3 - Деление")
+        print("4 - Умножение")
+        print("5 - Возведение в степень")
+        print("6 - Целочисленное деление")
+        print("7 - Я вообще не знаю что тут делаю")
+        mode = int(input()) # Даем пользователю выбор режима работы
+
+
+        if mode == 1: #Пользователь выбрал режим 1 и мы начинаем его работу
+            print("Вы выбрали операцию сложения, от вас калькулятору нужно ввод чисел через пробел.")
+            num_for_sum = input().split() # Пользователь вводит числа через пробел
+
+            num_for_sum = [float(num) for num in num_for_sum ] # Преобразуем строку в числа
+
+            # Выполняем сложение
+            result_sum = 0
+            for num in num_for_sum:
+                result_sum += num
+            
+            print("Сумма:", result_sum ) # Выводим результат
+
+
+        if mode == 2: #Пользователь выбрал режим 2 и мы начинаем его работу
+            print("Вы выбрали операцию Вычитания, от вас калькулятору нужно ввод чисел через пробел.")
+            num_for_sub = input().split()  # Пользователь вводит числа через пробел
+
+            num_for_sub = [float(num_sub) for num_sub in num_for_sub ] # Преобразуем строку в числа
+
+            # Выполняем вычитание
+            result_sub = num_for_sub[0]
+            for num_sub in num_for_sub[1:]:
+                result_sub -= num_sub
+            
+            print("Операция Вычитание:", result_sub )# Выводим результат
+
+
+        if mode == 3: #Пользователь выбрал режим 3 и мы начинаем его работу
+            print("Вы выбрали операцию деления, от вас калькулятору нужно ввод чисел через пробел.")
+            num_for_del = input().split() # Пользователь вводит числа через пробел
+
+            num_for_del = [float(num_del) for num_del in num_for_del ] # Преобразуем строку в числа
+
+            # Выполняем деление
+            result_del = num_for_del[0]
+            for num_del in num_for_del[1:]:
+                result_del /= num_del
+            
+            print("Результат деления:", result_del )# Выводим результат
+
+
+        if mode == 4: #Пользователь выбрал режим 4 и мы начинаем его работу
+            print("Вы выбрали операцию умножения, от вас калькулятору нужно ввод чисел через пробел.")
+            num_for_mul = input().split()  # Пользователь вводит числа через пробел
+
+            num_for_mul = [float(num_mul) for num_mul in num_for_mul ] # Преобразуем строку в числа
+
+            # Выполняем умножение
+            result_mul = 1
+            for num_mul in num_for_mul:
+                result_mul *= num_mul
+            
+            print("Результат умножения:", result_mul ) # Выводим результат
+
+
+        if mode == 5: #Пользователь выбрал режим 5 и мы начинаем его работу
+            print("Вы выбрали операцию возведения в степень, от вас калькулятору нужно только  ДВА  числа")
+            num_deg = int(input("Введите число для возведения в степень: "))
+            degree = int(input("Введите степень: "))
+        
+            result_deg = num_deg ** degree  # Выполняем возведение в степень
+
+            print("Результат возведения" , result_deg) # Выводим результат
+
+
+        if mode == 6: #Пользователь выбрал режим 6 и мы начинаем его работу
+            print("Вы выбрали операцию целочисленного, от вас калькулятору нужно только  ДВА  числа")
+            num_div = int(input("Введите число для целочисленного деления: "))
+            divider = int(input("Введите делитель: "))
+        
+            
+            result_division = num_div // divider # Выполняем целочисленное деление
+            print("Результат целочисленного деления" , result_division) # Выводим результат
+
+
+        if mode == 7: #Пользователь выбрал режим 7 и мы начинаем его работу
+
+            print("Как надумаете что то порешать приходите") 
+            exit() # Завершение программы
